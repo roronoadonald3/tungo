@@ -1,0 +1,8 @@
+.git
+.gitignore
+node_modules
+vendor
+logs
+*.md
+ke_project_complete.zip
+ke_project_final.zip
