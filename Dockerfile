@@ -1,7 +1,7 @@
 FROM php:8.1-apache
 
-# Install SQLite PDO extension
-RUN docker-php-ext-install pdo_sqlite
+# Install dependencies for SQLite
+RUN apt-get update && apt-get install -y libsqlite3-dev pkg-config     && docker-php-ext-install pdo_sqlite
 
 # Enable Apache rewrite module
 RUN a2enmod rewrite
