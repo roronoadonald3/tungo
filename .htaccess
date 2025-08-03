@@ -1,0 +1,9 @@
+# Set default DirectoryIndex
+DirectoryIndex index.php index.html
+
+# Enable URL rewriting (if needed)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>

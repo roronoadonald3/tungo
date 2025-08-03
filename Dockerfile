@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y libsqlite3-dev pkg-config     && docker
 
 # Enable Apache rewrite module
 RUN a2enmod rewrite
+RUN sed -i '/<Directory \/var\/www\/html>/,/<\/Directory>/ s/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
 
 # Copy application code
 COPY . /var/www/html/
