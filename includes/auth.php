@@ -1,8 +1,6 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-session_start();
-session_regenerate_id(true);
 
 /**
  * Système d'authentification pour TUNGO
@@ -13,7 +11,6 @@ require_once 'db.php';
 
 // Démarrer la session si elle n'est pas déjà démarrée
 if (session_status() === PHP_SESSION_NONE) {
-    session_start();
 }
 
 /**
@@ -84,7 +81,6 @@ function loginUser($userId, $userName = '') {
     $_SESSION['login_time'] = time();
     
     // Régénérer l'ID de session pour la sécurité
-    session_regenerate_id(true);
     
     // Logger la connexion
     logAction($userId, 'login', 'Connexion réussie');

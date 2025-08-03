@@ -1,12 +1,9 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-session_start();
-session_regenerate_id(true);
 
 // Démarrer la session si ce n’est pas déjà fait
 if (session_status() === PHP_SESSION_NONE) {
-    session_start();
 }
 
 // Vérifier si l'utilisateur est connecté
