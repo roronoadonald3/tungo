@@ -1,5 +1,5 @@
 # Set default DirectoryIndex
-DirectoryIndex index.php index.html
+DirectoryIndex indec.php index.php index.html
 
 # Enable URL rewriting (if needed)
 <IfModule mod_rewrite.c>
