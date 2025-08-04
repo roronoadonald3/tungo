@@ -8,13 +8,7 @@ ini_set('display_errors', 1);
  */
 
 // Essayer de charger dynamiquement l'extension pdo_pgsql
-if (!extension_loaded('pdo_pgsql')) {
-    if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
-        //@dl('pdo_pgsql.dll');
-    } else {
-        @dl('pdo_pgsql.so');
-    }
-}
+
 
 // Configuration de la base de données
 define('DB_HOST', 'localhost');
